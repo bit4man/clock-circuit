@@ -75,7 +75,7 @@ U 1 1 5D3AB0F5
 P 850 7300
 F 0 "J1" H 850 7500 50  0000 C CNN
 F 1 "Barrel_Jack" H 850 7100 50  0001 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal" H 900 7260 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" H 900 7260 50  0001 C CNN
 F 3 "~" H 900 7260 50  0001 C CNN
 	1    850  7300
 	1    0    0    -1  
@@ -1502,15 +1502,15 @@ Wire Wire Line
 Wire Wire Line
 	3750 3750 4500 3750
 $Comp
-L Connector_Generic:Conn_01x04 J2
+L Connector_Generic:Conn_01x05 J2
 U 1 1 5D4F2577
-P 10050 3000
-F 0 "J2" V 10150 2950 50  0000 L CNN
-F 1 "Conn_01x04" H 10130 2901 50  0001 L CNN
-F 2 "Connector_JST:JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical" H 10050 3000 50  0001 C CNN
-F 3 "~" H 10050 3000 50  0001 C CNN
-	1    10050 3000
-	0    -1   1    0   
+P 10400 3100
+F 0 "J2" V 10500 3050 50  0000 L CNN
+F 1 "Conn_01x04" H 10480 3001 50  0001 L CNN
+F 2 "Connector_JST:JST_EH_B5B-EH-A_1x05_P2.50mm_Vertical" H 10400 3100 50  0001 C CNN
+F 3 "~" H 10400 3100 50  0001 C CNN
+	1    10400 3100
+	1    0    0    1   
 $EndComp
 $Comp
 L Transistor_BJT:2N3904 Q2
@@ -1546,7 +1546,7 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 10050 1500 50  00
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9950 2600 9950 2800
+	9950 2600 9950 3200
 Wire Wire Line
 	10050 2150 10050 2650
 Wire Wire Line
@@ -1835,21 +1835,21 @@ Wire Wire Line
 	9750 2750 10250 2750
 Connection ~ 10250 2750
 Wire Wire Line
-	10250 2750 10250 2800
+	10250 2750 10250 2850
 Wire Wire Line
 	9650 2750 9650 2700
 Wire Wire Line
 	9650 2700 10150 2700
 Connection ~ 10150 2700
 Wire Wire Line
-	10150 2700 10150 2800
+	10150 2700 10150 3000
 Wire Wire Line
 	9550 2750 9550 2650
 Wire Wire Line
 	9550 2650 10050 2650
 Connection ~ 10050 2650
 Wire Wire Line
-	10050 2650 10050 2800
+	10050 2650 10050 3100
 Wire Wire Line
 	9450 2750 9450 2600
 Wire Wire Line
@@ -1859,4 +1859,56 @@ Wire Wire Line
 	10050 1700 10450 1700
 Wire Wire Line
 	10250 950  10250 800 
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5D72A18A
+P 3150 7200
+F 0 "J3" H 3230 7192 50  0000 L CNN
+F 1 "Power +5V In" H 3230 7101 50  0000 L CNN
+F 2 "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical" H 3150 7200 50  0001 C CNN
+F 3 "~" H 3150 7200 50  0001 C CNN
+	1    3150 7200
+	1    0    0    -1  
+$EndComp
+Connection ~ 2200 7400
+$Comp
+L Device:D D4
+U 1 1 5D58E7DA
+P 2600 7250
+F 0 "D4" V 2554 7329 50  0000 L CNN
+F 1 "D" V 2645 7329 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" H 2600 7250 50  0001 C CNN
+F 3 "~" H 2600 7250 50  0001 C CNN
+	1    2600 7250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2200 7400 2600 7400
+Wire Wire Line
+	2600 7400 2950 7400
+Wire Wire Line
+	2950 7400 2950 7300
+Connection ~ 2600 7400
+Wire Wire Line
+	2950 7200 2950 7100
+Wire Wire Line
+	2950 7100 2600 7100
+Wire Wire Line
+	2200 7100 2600 7100
+Connection ~ 2600 7100
+Wire Wire Line
+	10200 3300 9750 3300
+Wire Wire Line
+	9750 3300 9750 3150
+Connection ~ 9750 3150
+Wire Wire Line
+	9950 3200 10200 3200
+Wire Wire Line
+	10050 3100 10200 3100
+Wire Wire Line
+	10150 3000 10200 3000
+Wire Wire Line
+	10200 2900 10200 2850
+Wire Wire Line
+	10200 2850 10250 2850
 $EndSCHEMATC
