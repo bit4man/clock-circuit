@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:clock-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
@@ -75,7 +74,7 @@ U 1 1 5D3AB0F5
 P 850 7300
 F 0 "J1" H 850 7500 50  0000 C CNN
 F 1 "Barrel_Jack" H 850 7100 50  0001 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" H 900 7260 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 900 7260 50  0001 C CNN
 F 3 "~" H 900 7260 50  0001 C CNN
 	1    850  7300
 	1    0    0    -1  
@@ -286,7 +285,7 @@ U 1 1 5D4E1C85
 P 4800 2000
 F 0 "C7" H 4918 2046 50  0000 L CNN
 F 1 "1uF" H 4918 1955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 4838 1850 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 4838 1850 50  0001 C CNN
 F 3 "~" H 4800 2000 50  0001 C CNN
 	1    4800 2000
 	1    0    0    -1  
@@ -352,17 +351,6 @@ Connection ~ 4800 2150
 Wire Wire Line
 	4800 1450 5550 1450
 $Comp
-L Timer:LM556 U3
-U 1 1 5D4FD881
-P 2100 1650
-F 0 "U3" H 1900 2000 50  0000 C CNN
-F 1 "LM556" H 2100 1650 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2100 1650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm556.pdf" H 2100 1650 50  0001 C CNN
-	1    2100 1650
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:C C6
 U 1 1 5D4FE83D
 P 3450 1900
@@ -387,111 +375,77 @@ Wire Wire Line
 	4800 1850 5100 1850
 Wire Wire Line
 	3800 1850 3700 1850
-Text GLabel 700  1450 0    50   Output ~ 0
+Text GLabel 850  1350 1    50   Output ~ 0
 AEN
 Text GLabel 3650 1450 0    50   Output ~ 0
 ATHR
 Wire Wire Line
 	3650 1450 3800 1450
 Wire Wire Line
-	2100 1250 2100 1100
-Wire Wire Line
 	2100 1100 4300 1100
-Wire Wire Line
-	2100 2150 2100 2050
-Connection ~ 3450 2150
 $Comp
 L Device:LED_Small D1
 U 1 1 5D552DCA
-P 1000 1600
-F 0 "D1" V 1046 1532 50  0000 R CNN
-F 1 "LED_Small" V 955 1532 50  0001 R CNN
-F 2 "LED_THT:LED_D4.0mm" V 1000 1600 50  0001 C CNN
-F 3 "~" V 1000 1600 50  0001 C CNN
-	1    1000 1600
+P 1150 1650
+F 0 "D1" V 1196 1582 50  0000 R CNN
+F 1 "LED_Small" V 1105 1582 50  0001 R CNN
+F 2 "LED_THT:LED_D4.0mm" V 1150 1650 50  0001 C CNN
+F 3 "~" V 1150 1650 50  0001 C CNN
+	1    1150 1650
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5D5538FE
-P 1000 1850
-F 0 "R2" H 1070 1896 50  0000 L CNN
-F 1 "150" V 1000 1850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 930 1850 50  0001 C CNN
-F 3 "~" H 1000 1850 50  0001 C CNN
-	1    1000 1850
+P 1150 1900
+F 0 "R2" H 1220 1946 50  0000 L CNN
+F 1 "150" V 1150 1900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1080 1900 50  0001 C CNN
+F 3 "~" H 1150 1900 50  0001 C CNN
+	1    1150 1900
 	1    0    0    -1  
 $EndComp
 NoConn ~ 5250 2000
 Wire Wire Line
-	2100 2150 2800 2150
+	2100 2450 2800 2450
 Wire Wire Line
-	700  1450 800  1450
+	1150 1550 1150 1450
+Connection ~ 1150 1450
 Wire Wire Line
-	1000 1500 1000 1450
-Connection ~ 1000 1450
+	1150 1450 1600 1450
 Wire Wire Line
-	1000 1450 1600 1450
+	1150 2050 1150 2450
 Wire Wire Line
-	1000 2000 1000 2150
-Wire Wire Line
-	1000 2150 1400 2150
-Connection ~ 2100 2150
+	1150 2450 1400 2450
+Connection ~ 2100 2450
 $Comp
 L Device:R R8
 U 1 1 5D59169D
-P 3100 1900
-F 0 "R8" H 3170 1946 50  0000 L CNN
-F 1 "10K" V 3100 1900 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 1900 50  0001 C CNN
-F 3 "~" H 3100 1900 50  0001 C CNN
-	1    3100 1900
+P 3100 1650
+F 0 "R8" H 3170 1696 50  0000 L CNN
+F 1 "10K" V 3100 1650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 1650 50  0001 C CNN
+F 3 "~" H 3100 1650 50  0001 C CNN
+	1    3100 1650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2600 1450 3100 1450
 Wire Wire Line
-	3100 1450 3100 1750
-Wire Wire Line
-	3100 2050 3100 2150
-Connection ~ 3100 2150
-Wire Wire Line
-	3100 2150 3450 2150
-Text GLabel 1800 2450 2    50   Input ~ 0
+	3100 1450 3100 1500
+Text GLabel 1550 1950 3    50   Input ~ 0
 BTHR
-$Comp
-L Device:R R1
-U 1 1 5D5A2457
-P 800 1700
-F 0 "R1" H 600 1700 50  0000 L CNN
-F 1 "10K" V 800 1700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 730 1700 50  0001 C CNN
-F 3 "~" H 800 1700 50  0001 C CNN
-	1    800  1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	800  1550 800  1450
-Connection ~ 800  1450
-Wire Wire Line
-	800  1450 1000 1450
 $Comp
 L Device:CP C1
 U 1 1 5D5AA59B
-P 1000 2300
-F 0 "C1" H 1150 2250 50  0000 R CNN
-F 1 "1uF" H 1150 2400 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1038 2150 50  0001 C CNN
-F 3 "~" H 1000 2300 50  0001 C CNN
-	1    1000 2300
-	-1   0    0    1   
+P 850 2200
+F 0 "C1" H 1000 2150 50  0000 R CNN
+F 1 "1uF" H 1000 2300 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 888 2050 50  0001 C CNN
+F 3 "~" H 850 2200 50  0001 C CNN
+	1    850  2200
+	1    0    0    -1  
 $EndComp
-Connection ~ 1000 2150
-Wire Wire Line
-	800  2450 1000 2450
-Wire Wire Line
-	800  1850 800  2450
-Connection ~ 1000 2450
 $Comp
 L Device:C C5
 U 1 1 5D5B7E19
@@ -508,20 +462,13 @@ Wire Wire Line
 Wire Wire Line
 	2800 1650 2800 1750
 Wire Wire Line
-	2800 2050 2800 2150
-Connection ~ 2800 2150
-Wire Wire Line
-	2800 2150 3100 2150
+	2800 2050 2800 2450
 NoConn ~ 2600 1850
 Wire Wire Line
 	1600 1650 1400 1650
 Wire Wire Line
-	1400 1650 1400 2150
-Connection ~ 1400 2150
-Wire Wire Line
-	1400 2150 2100 2150
-Wire Wire Line
-	1800 2450 1600 2450
+	1400 1650 1400 2450
+Connection ~ 1400 2450
 Text GLabel 3100 1400 1    50   Output ~ 0
 BTHR
 Wire Wire Line
@@ -789,19 +736,14 @@ Connection ~ 7450 1050
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5E1210E0
-P 1300 2450
-F 0 "SW1" H 1300 2600 50  0000 C CNN
-F 1 "SW_Clock" H 1300 2350 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 1300 2650 50  0001 C CNN
-F 3 "~" H 1300 2650 50  0001 C CNN
-	1    1300 2450
+P 1100 1100
+F 0 "SW1" H 1100 1250 50  0000 C CNN
+F 1 "SW_Clock" H 1100 1000 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 1100 1300 50  0001 C CNN
+F 3 "~" H 1100 1300 50  0001 C CNN
+	1    1100 1100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1000 2450 1100 2450
-Wire Wire Line
-	1500 2450 1600 2450
-Connection ~ 1600 2450
 $Comp
 L Switch:SW_Push SW3
 U 1 1 5E16716D
@@ -1438,8 +1380,6 @@ Wire Wire Line
 	5850 4450 5850 4350
 Connection ~ 5850 4350
 Wire Wire Line
-	1600 1850 1600 2450
-Wire Wire Line
 	6250 4200 6050 4200
 Wire Wire Line
 	6050 4200 6050 3850
@@ -1911,4 +1851,92 @@ Wire Wire Line
 	10200 2900 10200 2850
 Wire Wire Line
 	10200 2850 10250 2850
+Wire Wire Line
+	2800 2450 3100 2450
+Connection ~ 2800 2450
+Wire Wire Line
+	3100 2450 3450 2450
+Wire Wire Line
+	3450 2450 3450 2150
+Connection ~ 3100 2450
+Connection ~ 3450 2150
+Wire Wire Line
+	3100 1800 3100 2450
+Wire Wire Line
+	850  1350 850  1450
+Connection ~ 2100 1100
+Wire Wire Line
+	1600 1850 1550 1850
+Wire Wire Line
+	1400 2450 2100 2450
+Wire Wire Line
+	2100 2450 2100 2050
+Wire Wire Line
+	2100 1250 2100 1100
+$Comp
+L Timer:LM556 U3
+U 1 1 5D4FD881
+P 2100 1650
+F 0 "U3" H 1900 2000 50  0000 C CNN
+F 1 "LM556" H 2100 1650 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2100 1650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm556.pdf" H 2100 1650 50  0001 C CNN
+	1    2100 1650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 1850 1550 1950
+$Comp
+L Device:R R21
+U 1 1 5DA71AF7
+P 850 1750
+F 0 "R21" H 920 1796 50  0000 L CNN
+F 1 "100K" V 850 1650 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 780 1750 50  0001 C CNN
+F 3 "~" H 850 1750 50  0001 C CNN
+	1    850  1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1100 1900 1100
+$Comp
+L Device:R R1
+U 1 1 5D5A2457
+P 1750 1100
+F 0 "R1" H 1550 1100 50  0000 L CNN
+F 1 "10K" V 1750 1100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1680 1100 50  0001 C CNN
+F 3 "~" H 1750 1100 50  0001 C CNN
+	1    1750 1100
+	0    -1   -1   0   
+$EndComp
+Connection ~ 850  1450
+Wire Wire Line
+	850  1450 1150 1450
+Wire Wire Line
+	850  1600 850  1450
+Wire Wire Line
+	850  1900 850  1950
+Wire Wire Line
+	850  2350 850  2450
+Wire Wire Line
+	850  2450 1150 2450
+Connection ~ 1150 2450
+Wire Wire Line
+	650  1100 650  1950
+Wire Wire Line
+	650  1950 850  1950
+Wire Wire Line
+	650  1100 900  1100
+Connection ~ 850  1950
+Wire Wire Line
+	850  1950 850  2050
+Wire Wire Line
+	1300 1100 1550 1100
+Wire Wire Line
+	1550 1850 1550 1100
+Connection ~ 1550 1850
+Connection ~ 1550 1100
+Wire Wire Line
+	1550 1100 1600 1100
 $EndSCHEMATC
